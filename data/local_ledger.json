@@ -1,0 +1,74 @@
+{
+  "0x999999cf1046e68e36e1aa2e0e07105eddd1f08e": {
+    "wallet_address": "0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E",
+    "decision_hash": "0x82eab7d3b2b049387bde40297038402a9a0d109a9c0828ba093476dcd1449652",
+    "timestamp": 1790439059,
+    "tx_hash": "0xb264f1b1a874c8272b4add554eb070ac7b29e66e975f9bdf2b32750e295b740a",
+    "block_number": 6540002,
+    "network": "Sepolia Testnet (Simulated Provider)",
+    "schema_version": "2.0",
+    "canonical_record": {
+      "wallet_id": "0x999999cf1046e68e36e1aa2e0e07105eddd1f08e",
+      "model": {
+        "model_id": "QSVC-ZZFeatureMap",
+        "model_version": "2.0",
+        "dataset_version": "2.0",
+        "feature_schema_version": "2.0",
+        "qml_features": [
+          "repayment_ratio",
+          "high_risk_tx_count",
+          "wallet_age_days",
+          "balance_stability",
+          "liquidation_count",
+          "historical_default"
+        ],
+        "n_qubits": 6,
+        "trained_at": 1790438340
+      },
+      "risk_score": 64.9,
+      "decision": "DENIED",
+      "features": {
+        "avg_transaction_value": 2.0,
+        "balance_stability": 92.0,
+        "borrow_count": 10,
+        "failed_transactions": 1,
+        "high_risk_tx_count": 0,
+        "historical_default": 0,
+        "large_tx_ratio": 0.08,
+        "liquidation_count": 0,
+        "protocol_count": 4,
+        "repayment_ratio": 0.88,
+        "transaction_count": 85,
+        "wallet_age_days": 850
+      },
+      "explanation": {
+        "base_value": 49.1,
+        "feature_contributions": {
+          "avg_tx_value": 0.0,
+          "balance_stability": 1.2,
+          "borrow_count": 0.0,
+          "failed_tx": 0.0,
+          "high_risk_tx": 5.3,
+          "historical_default": 0.5,
+          "large_tx_ratio": 0.0,
+          "liquidations": -5.2,
+          "protocol_diversity": 0.0,
+          "repayment_ratio": 2.3,
+          "tx_count": 0.0,
+          "wallet_age": 11.7
+        }
+      },
+      "audit": {
+        "faithfulness": 0.333,
+        "faithfulness_verdict": "LOW",
+        "stability": 0.774,
+        "stability_verdict": "HIGH",
+        "sensitivity": 0.0,
+        "sensitivity_verdict": "LOW",
+        "overall_verdict": "QUESTIONABLE"
+      },
+      "timestamp": 1790439059,
+      "schema_version": "2.0"
+    }
+  }
+}

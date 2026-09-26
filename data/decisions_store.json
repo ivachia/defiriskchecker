@@ -1,0 +1,1021 @@
+{
+  "0x999999cf1046e68e36e1aa2e0e07105eddd1f08e": {
+    "wallet_address": "0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E",
+    "risk_score": 64.9,
+    "decision": "DENIED",
+    "decision_hash": "0x82eab7d3b2b049387bde40297038402a9a0d109a9c0828ba093476dcd1449652",
+    "features": {
+      "wallet_age_days": 850,
+      "transaction_count": 85,
+      "avg_transaction_value": 2.0,
+      "repayment_ratio": 0.88,
+      "liquidation_count": 0,
+      "borrow_count": 10,
+      "high_risk_tx_count": 0,
+      "protocol_count": 4,
+      "balance_stability": 92.0,
+      "failed_transactions": 1,
+      "large_tx_ratio": 0.08,
+      "historical_default": 0
+    },
+    "explanation": {
+      "wallet_address": "0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E",
+      "risk_score": 64.9,
+      "decision": "deny",
+      "base_risk_value": 49.1,
+      "feature_contributions": {
+        "repayment_ratio": 2.3,
+        "high_risk_tx": 5.3,
+        "wallet_age": 11.7,
+        "balance_stability": 1.2,
+        "liquidations": -5.2,
+        "historical_default": 0.5,
+        "tx_count": 0.0,
+        "avg_tx_value": 0.0,
+        "borrow_count": 0.0,
+        "protocol_diversity": 0.0,
+        "failed_tx": 0.0,
+        "large_tx_ratio": 0.0
+      },
+      "input_features": {
+        "wallet_age": 850.0,
+        "tx_count": 85.0,
+        "avg_tx_value": 2.0,
+        "repayment_ratio": 0.88,
+        "liquidations": 0.0,
+        "borrow_count": 10.0,
+        "high_risk_tx": 0.0,
+        "protocol_diversity": 4.0,
+        "balance_stability": 92.0,
+        "failed_tx": 1.0,
+        "large_tx_ratio": 0.08,
+        "historical_default": 0.0
+      },
+      "cached": true
+    },
+    "audit": {
+      "faithfulness": {
+        "score": 0.333,
+        "score_pct": 33.3,
+        "verdict": "LOW",
+        "display_level": "\u26a0 Low",
+        "faithful_features": 1,
+        "tested_features": 3,
+        "perturb_results": [
+          {
+            "feature": "wallet_age",
+            "shap_attribution": 11.7,
+            "original_value": 850.0,
+            "perturbed_value": 550.0,
+            "original_risk": 64.9,
+            "new_risk": 32.1,
+            "actual_delta": -32.8,
+            "expected_direction_correct": false,
+            "magnitude_sufficient": true,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "high_risk_tx",
+            "shap_attribution": 5.3,
+            "original_value": 0.0,
+            "perturbed_value": 0.0,
+            "original_risk": 64.9,
+            "new_risk": 64.9,
+            "actual_delta": 0.0,
+            "expected_direction_correct": true,
+            "magnitude_sufficient": false,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "liquidations",
+            "shap_attribution": -5.2,
+            "original_value": 0.0,
+            "perturbed_value": 4.0,
+            "original_risk": 64.9,
+            "new_risk": 25.8,
+            "actual_delta": -39.1,
+            "expected_direction_correct": true,
+            "magnitude_sufficient": true,
+            "faithful": true,
+            "verdict": "\u2713 Supported"
+          }
+        ],
+        "description": "1/3 top features passed perturbation test. A faithful SHAP explanation should show that the features it highlights actually move the prediction when changed."
+      },
+      "stability": {
+        "score": 0.774,
+        "score_pct": 77.4,
+        "verdict": "HIGH",
+        "display_level": "\u2713 High",
+        "mean_rank_correlation": 0.774,
+        "n_clones_tested": 5,
+        "clone_details": [
+          {
+            "seed": 0,
+            "rank_correlation": 0.825,
+            "contributions": {
+              "wallet_age": 11.2,
+              "high_risk_tx": 5.6,
+              "liquidations": -7.3,
+              "repayment_ratio": 2.5,
+              "balance_stability": 4.9,
+              "historical_default": -0.2,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 1,
+            "rank_correlation": 0.697,
+            "contributions": {
+              "wallet_age": 8.1,
+              "high_risk_tx": 3.2,
+              "liquidations": -2.3,
+              "repayment_ratio": -2.0,
+              "balance_stability": 7.8,
+              "historical_default": 1.5,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 2,
+            "rank_correlation": 0.53,
+            "contributions": {
+              "wallet_age": 10.9,
+              "high_risk_tx": 5.4,
+              "liquidations": -4.5,
+              "repayment_ratio": -1.3,
+              "balance_stability": 6.0,
+              "historical_default": -0.6,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 3,
+            "rank_correlation": 0.833,
+            "contributions": {
+              "wallet_age": 11.7,
+              "high_risk_tx": 5.9,
+              "liquidations": -4.0,
+              "repayment_ratio": 3.8,
+              "balance_stability": 2.6,
+              "historical_default": -2.3,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 4,
+            "rank_correlation": 0.986,
+            "contributions": {
+              "wallet_age": 8.4,
+              "high_risk_tx": 5.2,
+              "liquidations": -4.3,
+              "repayment_ratio": 1.5,
+              "balance_stability": 1.0,
+              "historical_default": 1.5,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          }
+        ],
+        "description": "Mean Spearman rank-correlation across 5 micro-perturbed clones: 0.774. Stable explanations produce consistent feature rankings even for nearly-identical inputs. Threshold for HIGH stability: \u03c1 \u2265 0.7."
+      },
+      "sensitivity": {
+        "score": 0.0,
+        "score_pct": 0.0,
+        "verdict": "LOW",
+        "display_level": "\u26a0 Low",
+        "sensitive_features": 0,
+        "tested_features": 3,
+        "feature_details": [
+          {
+            "feature": "high_risk_tx",
+            "shap_attribution": 5.3,
+            "original_value": 0.0,
+            "worsened_value": 8.0,
+            "original_risk": 64.9,
+            "new_risk": 29.8,
+            "delta": -35.1,
+            "sensitive": false,
+            "verdict": "\u26a0 Insensitive"
+          },
+          {
+            "feature": "wallet_age",
+            "shap_attribution": 11.7,
+            "original_value": 850.0,
+            "worsened_value": 1150.0,
+            "original_risk": 64.9,
+            "new_risk": 51.5,
+            "delta": -13.4,
+            "sensitive": false,
+            "verdict": "\u26a0 Insensitive"
+          },
+          {
+            "feature": "liquidations",
+            "shap_attribution": -5.2,
+            "original_value": 0.0,
+            "worsened_value": 4.0,
+            "original_risk": 64.9,
+            "new_risk": 25.8,
+            "delta": -39.1,
+            "sensitive": false,
+            "verdict": "\u26a0 Insensitive"
+          }
+        ],
+        "description": "0/3 features produced expected directional risk changes (\u2265 2.0 pt shift) when moved toward the risky extreme. Low sensitivity may indicate model saturation or distributional edge effects."
+      },
+      "overall_verdict": "QUESTIONABLE",
+      "overall_description": "Multiple audit dimensions failed (Faithfulness, Sensitivity). The explanation may not reliably reflect the model's actual reasoning.",
+      "summary_lines": [
+        "Faithfulness   \u26a0 Low         (1/3 features verified)",
+        "Stability      \u2713 High        (\u03c1 = 0.774 across 5 clones)",
+        "Sensitivity    \u26a0 Low         (0/3 features directionally correct)",
+        "Overall: QUESTIONABLE"
+      ]
+    },
+    "model_version": {
+      "model_id": "QSVC-ZZFeatureMap",
+      "model_version": "2.0",
+      "dataset_version": "2.0",
+      "feature_schema_version": "2.0",
+      "qml_features": [
+        "repayment_ratio",
+        "high_risk_tx_count",
+        "wallet_age_days",
+        "balance_stability",
+        "liquidation_count",
+        "historical_default"
+      ],
+      "n_qubits": 6,
+      "trained_at": 1790438340
+    },
+    "canonical_record": {
+      "wallet_id": "0x999999cf1046e68e36e1aa2e0e07105eddd1f08e",
+      "model": {
+        "model_id": "QSVC-ZZFeatureMap",
+        "model_version": "2.0",
+        "dataset_version": "2.0",
+        "feature_schema_version": "2.0",
+        "qml_features": [
+          "repayment_ratio",
+          "high_risk_tx_count",
+          "wallet_age_days",
+          "balance_stability",
+          "liquidation_count",
+          "historical_default"
+        ],
+        "n_qubits": 6,
+        "trained_at": 1790438340
+      },
+      "risk_score": 64.9,
+      "decision": "DENIED",
+      "features": {
+        "avg_transaction_value": 2.0,
+        "balance_stability": 92.0,
+        "borrow_count": 10,
+        "failed_transactions": 1,
+        "high_risk_tx_count": 0,
+        "historical_default": 0,
+        "large_tx_ratio": 0.08,
+        "liquidation_count": 0,
+        "protocol_count": 4,
+        "repayment_ratio": 0.88,
+        "transaction_count": 85,
+        "wallet_age_days": 850
+      },
+      "explanation": {
+        "base_value": 49.1,
+        "feature_contributions": {
+          "avg_tx_value": 0.0,
+          "balance_stability": 1.2,
+          "borrow_count": 0.0,
+          "failed_tx": 0.0,
+          "high_risk_tx": 5.3,
+          "historical_default": 0.5,
+          "large_tx_ratio": 0.0,
+          "liquidations": -5.2,
+          "protocol_diversity": 0.0,
+          "repayment_ratio": 2.3,
+          "tx_count": 0.0,
+          "wallet_age": 11.7
+        }
+      },
+      "audit": {
+        "faithfulness": 0.333,
+        "faithfulness_verdict": "LOW",
+        "stability": 0.774,
+        "stability_verdict": "HIGH",
+        "sensitivity": 0.0,
+        "sensitivity_verdict": "LOW",
+        "overall_verdict": "QUESTIONABLE"
+      },
+      "timestamp": 1790439059,
+      "schema_version": "2.0"
+    },
+    "timestamp": 1790439059,
+    "on_chain": {
+      "network": "Sepolia Testnet (Simulated Provider)",
+      "status": "confirmed",
+      "tx_hash": "0xb264f1b1a874c8272b4add554eb070ac7b29e66e975f9bdf2b32750e295b740a",
+      "block_number": 6540002,
+      "wallet_address": "0x999999cf1046e68e36E1aA2E0E07105eDDD1f08E",
+      "decision_hash": "0x82eab7d3b2b049387bde40297038402a9a0d109a9c0828ba093476dcd1449652",
+      "timestamp": 1790439059,
+      "explorer_url": "https://sepolia.etherscan.io/tx/0xb264f1b1a874c8272b4add554eb070ac7b29e66e975f9bdf2b32750e295b740a",
+      "schema_version": "2.0"
+    }
+  },
+  "0x7d69bd4e9429ceb8fe21e78277372e93c0784092": {
+    "wallet_address": "0x7D69BD4E9429cEB8Fe21E78277372e93C0784092",
+    "risk_score": 46.0,
+    "decision": "APPROVED",
+    "decision_hash": "0x2cb152b640490c330db96ee11178b8399a2fd7e1a0b50000051211d8197f2fb4",
+    "features": {
+      "wallet_age_days": 269.0,
+      "transaction_count": 351.0,
+      "avg_transaction_value": 8.0996,
+      "repayment_ratio": 0.5843,
+      "liquidation_count": 1.0,
+      "borrow_count": 5.0,
+      "high_risk_tx_count": 1.0,
+      "protocol_count": 11.0,
+      "balance_stability": 85.88,
+      "failed_transactions": 1.0,
+      "large_tx_ratio": 0.2775,
+      "historical_default": 0.0
+    },
+    "explanation": {
+      "wallet_address": "0x7D69BD4E9429cEB8Fe21E78277372e93C0784092",
+      "risk_score": 46.0,
+      "decision": "approve",
+      "base_risk_value": 49.1,
+      "feature_contributions": {
+        "repayment_ratio": -0.5,
+        "high_risk_tx": -2.2,
+        "wallet_age": -1.5,
+        "balance_stability": -2.1,
+        "liquidations": 1.6,
+        "historical_default": 1.7,
+        "tx_count": 0.0,
+        "avg_tx_value": 0.0,
+        "borrow_count": 0.0,
+        "protocol_diversity": 0.0,
+        "failed_tx": 0.0,
+        "large_tx_ratio": 0.0
+      },
+      "input_features": {
+        "wallet_age": 269.0,
+        "tx_count": 351.0,
+        "avg_tx_value": 8.0996,
+        "repayment_ratio": 0.5843,
+        "liquidations": 1.0,
+        "borrow_count": 5.0,
+        "high_risk_tx": 1.0,
+        "protocol_diversity": 11.0,
+        "balance_stability": 85.88,
+        "failed_tx": 1.0,
+        "large_tx_ratio": 0.2775,
+        "historical_default": 0.0
+      },
+      "cached": true
+    },
+    "audit": {
+      "faithfulness": {
+        "score": 0.0,
+        "score_pct": 0.0,
+        "verdict": "LOW",
+        "display_level": "\u26a0 Low",
+        "faithful_features": 0,
+        "tested_features": 3,
+        "perturb_results": [
+          {
+            "feature": "high_risk_tx",
+            "shap_attribution": -2.2,
+            "original_value": 1.0,
+            "perturbed_value": 9.0,
+            "original_risk": 46.0,
+            "new_risk": 67.1,
+            "actual_delta": 21.1,
+            "expected_direction_correct": false,
+            "magnitude_sufficient": true,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "balance_stability",
+            "shap_attribution": -2.1,
+            "original_value": 85.88,
+            "perturbed_value": 100.0,
+            "original_risk": 46.0,
+            "new_risk": 42.6,
+            "actual_delta": -3.4,
+            "expected_direction_correct": true,
+            "magnitude_sufficient": false,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "historical_default",
+            "shap_attribution": 1.7,
+            "original_value": 0.0,
+            "perturbed_value": 0.0,
+            "original_risk": 46.0,
+            "new_risk": 46.0,
+            "actual_delta": 0.0,
+            "expected_direction_correct": true,
+            "magnitude_sufficient": false,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          }
+        ],
+        "description": "0/3 top features passed perturbation test. A faithful SHAP explanation should show that the features it highlights actually move the prediction when changed."
+      },
+      "stability": {
+        "score": 0.877,
+        "score_pct": 87.7,
+        "verdict": "HIGH",
+        "display_level": "\u2713 High",
+        "mean_rank_correlation": 0.877,
+        "n_clones_tested": 5,
+        "clone_details": [
+          {
+            "seed": 0,
+            "rank_correlation": 0.825,
+            "contributions": {
+              "high_risk_tx": -3.7,
+              "balance_stability": -3.9,
+              "historical_default": 2.6,
+              "liquidations": 1.6,
+              "wallet_age": -2.2,
+              "repayment_ratio": 0.4,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 1,
+            "rank_correlation": 0.998,
+            "contributions": {
+              "high_risk_tx": -2.5,
+              "balance_stability": -2.5,
+              "historical_default": 0.6,
+              "liquidations": 0.3,
+              "wallet_age": -1.5,
+              "repayment_ratio": -0.7,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 2,
+            "rank_correlation": 0.984,
+            "contributions": {
+              "high_risk_tx": -2.3,
+              "balance_stability": -3.6,
+              "historical_default": 2.1,
+              "liquidations": 2.5,
+              "wallet_age": -1.4,
+              "repayment_ratio": -0.8,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 3,
+            "rank_correlation": 0.976,
+            "contributions": {
+              "high_risk_tx": -1.7,
+              "balance_stability": -4.8,
+              "historical_default": 2.8,
+              "liquidations": 1.7,
+              "wallet_age": -2.1,
+              "repayment_ratio": -0.1,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 4,
+            "rank_correlation": 0.602,
+            "contributions": {
+              "high_risk_tx": -3.3,
+              "balance_stability": -0.6,
+              "historical_default": 2.5,
+              "liquidations": -0.5,
+              "wallet_age": -0.7,
+              "repayment_ratio": 0.1,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          }
+        ],
+        "description": "Mean Spearman rank-correlation across 5 micro-perturbed clones: 0.877. Stable explanations produce consistent feature rankings even for nearly-identical inputs. Threshold for HIGH stability: \u03c1 \u2265 0.7."
+      },
+      "sensitivity": {
+        "score": 0.0,
+        "score_pct": 0.0,
+        "verdict": "UNKNOWN",
+        "display_level": "? Unknown",
+        "sensitive_features": 0,
+        "tested_features": 0,
+        "feature_details": [],
+        "description": "0/0 features produced expected directional risk changes (\u2265 2.0 pt shift) when moved toward the risky extreme. Low sensitivity may indicate model saturation or distributional edge effects."
+      },
+      "overall_verdict": "QUESTIONABLE",
+      "overall_description": "Multiple audit dimensions failed (Faithfulness). The explanation may not reliably reflect the model's actual reasoning.",
+      "summary_lines": [
+        "Faithfulness   \u26a0 Low         (0/3 features verified)",
+        "Stability      \u2713 High        (\u03c1 = 0.877 across 5 clones)",
+        "Sensitivity    ? Unknown     (0/0 features directionally correct)",
+        "Overall: QUESTIONABLE"
+      ]
+    },
+    "model_version": {
+      "model_id": "QSVC-ZZFeatureMap",
+      "model_version": "2.0",
+      "dataset_version": "2.0",
+      "feature_schema_version": "2.0",
+      "qml_features": [
+        "repayment_ratio",
+        "high_risk_tx_count",
+        "wallet_age_days",
+        "balance_stability",
+        "liquidation_count",
+        "historical_default"
+      ],
+      "n_qubits": 6,
+      "trained_at": 1790438340
+    },
+    "canonical_record": {
+      "wallet_id": "0x7d69bd4e9429ceb8fe21e78277372e93c0784092",
+      "model": {
+        "model_id": "QSVC-ZZFeatureMap",
+        "model_version": "2.0",
+        "dataset_version": "2.0",
+        "feature_schema_version": "2.0",
+        "qml_features": [
+          "repayment_ratio",
+          "high_risk_tx_count",
+          "wallet_age_days",
+          "balance_stability",
+          "liquidation_count",
+          "historical_default"
+        ],
+        "n_qubits": 6,
+        "trained_at": 1790438340
+      },
+      "risk_score": 46.0,
+      "decision": "APPROVED",
+      "features": {
+        "avg_transaction_value": 8.0996,
+        "balance_stability": 85.88,
+        "borrow_count": 5.0,
+        "failed_transactions": 1.0,
+        "high_risk_tx_count": 1.0,
+        "historical_default": 0.0,
+        "large_tx_ratio": 0.2775,
+        "liquidation_count": 1.0,
+        "protocol_count": 11.0,
+        "repayment_ratio": 0.5843,
+        "transaction_count": 351.0,
+        "wallet_age_days": 269.0
+      },
+      "explanation": {
+        "base_value": 49.1,
+        "feature_contributions": {
+          "avg_tx_value": 0.0,
+          "balance_stability": -2.1,
+          "borrow_count": 0.0,
+          "failed_tx": 0.0,
+          "high_risk_tx": -2.2,
+          "historical_default": 1.7,
+          "large_tx_ratio": 0.0,
+          "liquidations": 1.6,
+          "protocol_diversity": 0.0,
+          "repayment_ratio": -0.5,
+          "tx_count": 0.0,
+          "wallet_age": -1.5
+        }
+      },
+      "audit": {
+        "faithfulness": 0.0,
+        "faithfulness_verdict": "LOW",
+        "stability": 0.877,
+        "stability_verdict": "HIGH",
+        "sensitivity": 0.0,
+        "sensitivity_verdict": "UNKNOWN",
+        "overall_verdict": "QUESTIONABLE"
+      },
+      "timestamp": 1790441490,
+      "schema_version": "2.0"
+    },
+    "timestamp": 1790441490
+  },
+  "0x1111111111111111111111111111111111111111": {
+    "wallet_address": "0x1111111111111111111111111111111111111111",
+    "risk_score": 9.9,
+    "decision": "APPROVED",
+    "decision_hash": "0x03cf2dba744393c0fb47d84472b5f10aee743b5ca00a1ef47306fbf5edab6156",
+    "features": {
+      "wallet_age_days": 280,
+      "transaction_count": 85,
+      "avg_transaction_value": 2.0,
+      "repayment_ratio": 0.65,
+      "liquidation_count": 0,
+      "borrow_count": 10,
+      "high_risk_tx_count": 2,
+      "protocol_count": 4,
+      "balance_stability": 60.0,
+      "failed_transactions": 1,
+      "large_tx_ratio": 0.08,
+      "historical_default": 0
+    },
+    "explanation": {
+      "wallet_address": "0x1111111111111111111111111111111111111111",
+      "risk_score": 9.9,
+      "decision": "approve",
+      "base_risk_value": 49.1,
+      "feature_contributions": {
+        "repayment_ratio": -3.3,
+        "high_risk_tx": -8.3,
+        "wallet_age": -5.9,
+        "balance_stability": -10.0,
+        "liquidations": -12.5,
+        "historical_default": 0.8,
+        "tx_count": 0.0,
+        "avg_tx_value": 0.0,
+        "borrow_count": 0.0,
+        "protocol_diversity": 0.0,
+        "failed_tx": 0.0,
+        "large_tx_ratio": 0.0
+      },
+      "input_features": {
+        "wallet_age": 280.0,
+        "tx_count": 85.0,
+        "avg_tx_value": 2.0,
+        "repayment_ratio": 0.65,
+        "liquidations": 0.0,
+        "borrow_count": 10.0,
+        "high_risk_tx": 2.0,
+        "protocol_diversity": 4.0,
+        "balance_stability": 60.0,
+        "failed_tx": 1.0,
+        "large_tx_ratio": 0.08,
+        "historical_default": 0.0
+      },
+      "cached": false
+    },
+    "audit": {
+      "faithfulness": {
+        "score": 0.0,
+        "score_pct": 0.0,
+        "verdict": "LOW",
+        "display_level": "\u26a0 Low",
+        "faithful_features": 0,
+        "tested_features": 3,
+        "perturb_results": [
+          {
+            "feature": "liquidations",
+            "shap_attribution": -12.5,
+            "original_value": 0.0,
+            "perturbed_value": 4.0,
+            "original_risk": 9.9,
+            "new_risk": 46.0,
+            "actual_delta": 36.1,
+            "expected_direction_correct": false,
+            "magnitude_sufficient": true,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "balance_stability",
+            "shap_attribution": -10.0,
+            "original_value": 60.0,
+            "perturbed_value": 85.0,
+            "original_risk": 9.9,
+            "new_risk": 27.3,
+            "actual_delta": 17.4,
+            "expected_direction_correct": false,
+            "magnitude_sufficient": true,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          },
+          {
+            "feature": "high_risk_tx",
+            "shap_attribution": -8.3,
+            "original_value": 2.0,
+            "perturbed_value": 10.0,
+            "original_risk": 9.9,
+            "new_risk": 39.7,
+            "actual_delta": 29.8,
+            "expected_direction_correct": false,
+            "magnitude_sufficient": true,
+            "faithful": false,
+            "verdict": "\u26a0 Questionable"
+          }
+        ],
+        "description": "0/3 top features passed perturbation test. A faithful SHAP explanation should show that the features it highlights actually move the prediction when changed."
+      },
+      "stability": {
+        "score": 0.857,
+        "score_pct": 85.7,
+        "verdict": "HIGH",
+        "display_level": "\u2713 High",
+        "mean_rank_correlation": 0.857,
+        "n_clones_tested": 5,
+        "clone_details": [
+          {
+            "seed": 0,
+            "rank_correlation": 0.992,
+            "contributions": {
+              "liquidations": -11.7,
+              "balance_stability": -11.1,
+              "high_risk_tx": -6.5,
+              "wallet_age": -9.4,
+              "repayment_ratio": -1.4,
+              "historical_default": 0.3,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 1,
+            "rank_correlation": 0.716,
+            "contributions": {
+              "liquidations": -9.9,
+              "balance_stability": -11.8,
+              "high_risk_tx": -7.5,
+              "wallet_age": -6.3,
+              "repayment_ratio": -0.0,
+              "historical_default": -1.8,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 2,
+            "rank_correlation": 0.769,
+            "contributions": {
+              "liquidations": -11.0,
+              "balance_stability": -13.9,
+              "high_risk_tx": -7.7,
+              "wallet_age": -6.3,
+              "repayment_ratio": 0.4,
+              "historical_default": 0.2,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 3,
+            "rank_correlation": 0.992,
+            "contributions": {
+              "liquidations": -8.8,
+              "balance_stability": -12.9,
+              "high_risk_tx": -8.1,
+              "wallet_age": -7.5,
+              "repayment_ratio": -4.2,
+              "historical_default": 0.8,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          },
+          {
+            "seed": 4,
+            "rank_correlation": 0.817,
+            "contributions": {
+              "liquidations": -8.2,
+              "balance_stability": -10.1,
+              "high_risk_tx": -5.5,
+              "wallet_age": -7.7,
+              "repayment_ratio": -3.1,
+              "historical_default": -1.6,
+              "tx_count": 0.0,
+              "avg_tx_value": 0.0,
+              "borrow_count": 0.0,
+              "protocol_diversity": 0.0,
+              "failed_tx": 0.0,
+              "large_tx_ratio": 0.0
+            }
+          }
+        ],
+        "description": "Mean Spearman rank-correlation across 5 micro-perturbed clones: 0.857. Stable explanations produce consistent feature rankings even for nearly-identical inputs. Threshold for HIGH stability: \u03c1 \u2265 0.7."
+      },
+      "sensitivity": {
+        "score": 1.0,
+        "score_pct": 100.0,
+        "verdict": "HIGH",
+        "display_level": "\u2713 High",
+        "sensitive_features": 5,
+        "tested_features": 5,
+        "feature_details": [
+          {
+            "feature": "repayment_ratio",
+            "shap_attribution": -3.3,
+            "original_value": 0.65,
+            "worsened_value": 0.9,
+            "original_risk": 9.9,
+            "new_risk": 16.6,
+            "delta": 6.7,
+            "sensitive": true,
+            "verdict": "\u2713 Sensitive"
+          },
+          {
+            "feature": "high_risk_tx",
+            "shap_attribution": -8.3,
+            "original_value": 2.0,
+            "worsened_value": 10.0,
+            "original_risk": 9.9,
+            "new_risk": 39.7,
+            "delta": 29.8,
+            "sensitive": true,
+            "verdict": "\u2713 Sensitive"
+          },
+          {
+            "feature": "wallet_age",
+            "shap_attribution": -5.9,
+            "original_value": 280.0,
+            "worsened_value": 580.0,
+            "original_risk": 9.9,
+            "new_risk": 24.2,
+            "delta": 14.3,
+            "sensitive": true,
+            "verdict": "\u2713 Sensitive"
+          },
+          {
+            "feature": "balance_stability",
+            "shap_attribution": -10.0,
+            "original_value": 60.0,
+            "worsened_value": 85.0,
+            "original_risk": 9.9,
+            "new_risk": 27.3,
+            "delta": 17.4,
+            "sensitive": true,
+            "verdict": "\u2713 Sensitive"
+          },
+          {
+            "feature": "liquidations",
+            "shap_attribution": -12.5,
+            "original_value": 0.0,
+            "worsened_value": 4.0,
+            "original_risk": 9.9,
+            "new_risk": 46.0,
+            "delta": 36.1,
+            "sensitive": true,
+            "verdict": "\u2713 Sensitive"
+          }
+        ],
+        "description": "5/5 features produced expected directional risk changes (\u2265 2.0 pt shift) when moved toward the risky extreme. Low sensitivity may indicate model saturation or distributional edge effects."
+      },
+      "overall_verdict": "SUPPORTED WITH CAUTION",
+      "overall_description": "The explanation passes most audits but has limitations in: Faithfulness. Use it as a guide, not a guarantee.",
+      "summary_lines": [
+        "Faithfulness   \u26a0 Low         (0/3 features verified)",
+        "Stability      \u2713 High        (\u03c1 = 0.857 across 5 clones)",
+        "Sensitivity    \u2713 High        (5/5 features directionally correct)",
+        "Overall: SUPPORTED WITH CAUTION"
+      ]
+    },
+    "model_version": {
+      "model_id": "QSVC-ZZFeatureMap",
+      "model_version": "2.0",
+      "dataset_version": "2.0",
+      "feature_schema_version": "2.0",
+      "qml_features": [
+        "repayment_ratio",
+        "high_risk_tx_count",
+        "wallet_age_days",
+        "balance_stability",
+        "liquidation_count",
+        "historical_default"
+      ],
+      "n_qubits": 6,
+      "trained_at": 1790438340
+    },
+    "canonical_record": {
+      "wallet_id": "0x1111111111111111111111111111111111111111",
+      "model": {
+        "model_id": "QSVC-ZZFeatureMap",
+        "model_version": "2.0",
+        "dataset_version": "2.0",
+        "feature_schema_version": "2.0",
+        "qml_features": [
+          "repayment_ratio",
+          "high_risk_tx_count",
+          "wallet_age_days",
+          "balance_stability",
+          "liquidation_count",
+          "historical_default"
+        ],
+        "n_qubits": 6,
+        "trained_at": 1790438340
+      },
+      "risk_score": 9.9,
+      "decision": "APPROVED",
+      "features": {
+        "avg_transaction_value": 2.0,
+        "balance_stability": 60.0,
+        "borrow_count": 10,
+        "failed_transactions": 1,
+        "high_risk_tx_count": 2,
+        "historical_default": 0,
+        "large_tx_ratio": 0.08,
+        "liquidation_count": 0,
+        "protocol_count": 4,
+        "repayment_ratio": 0.65,
+        "transaction_count": 85,
+        "wallet_age_days": 280
+      },
+      "explanation": {
+        "base_value": 49.1,
+        "feature_contributions": {
+          "avg_tx_value": 0.0,
+          "balance_stability": -10.0,
+          "borrow_count": 0.0,
+          "failed_tx": 0.0,
+          "high_risk_tx": -8.3,
+          "historical_default": 0.8,
+          "large_tx_ratio": 0.0,
+          "liquidations": -12.5,
+          "protocol_diversity": 0.0,
+          "repayment_ratio": -3.3,
+          "tx_count": 0.0,
+          "wallet_age": -5.9
+        }
+      },
+      "audit": {
+        "faithfulness": 0.0,
+        "faithfulness_verdict": "LOW",
+        "stability": 0.857,
+        "stability_verdict": "HIGH",
+        "sensitivity": 1.0,
+        "sensitivity_verdict": "HIGH",
+        "overall_verdict": "SUPPORTED WITH CAUTION"
+      },
+      "timestamp": 1790438879,
+      "schema_version": "2.0"
+    },
+    "timestamp": 1790438879
+  }
+}
